@@ -6,12 +6,22 @@ import CreateArea from "./CreateArea";
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const [message, setMessage] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
 
   function addNote(note) {
     if (note.content.trim() !== "") {
       setNotes((prevNotes) => {
         return [...prevNotes, note];
       });
+      setMessage("Note added!");
+      setTimeout(() => {
+        setMessage("");
+      }, 2000);
     }
   }
 
@@ -24,9 +34,10 @@ function App() {
   }
 
   return (
-    <div>
-      <Header />
+    <div className={darkMode ? "dark-mode" : ""}>
+      <Header toggleDarkMode={toggleDarkMode} />
       <CreateArea onAdd={addNote} />
+      {message && <p>{message}</p>}
       {notes.map((noteItem, index) => (
         <Note
           key={index}

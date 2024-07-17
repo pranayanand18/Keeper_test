@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function Header() {
+function Header({ toggleDarkMode }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   return (
-    <header>
+    <header className={visible ? "visible" : ""}>
       <h1>Keeper</h1>
+      <button onClick={toggleDarkMode}> Dark</button>
     </header>
   );
 }
