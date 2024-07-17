@@ -10,7 +10,7 @@ function Header({ toggleDarkMode }) {
   return (
     <header className={visible ? "visible" : ""}>
       <h1>Keeper</h1>
-      <button onClick={toggleDarkMode}> Dark</button>
+      <button onClick={toggleDarkMode}>Dark</button>
     </header>
   );
 }
