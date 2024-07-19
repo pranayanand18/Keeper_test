@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.9577e8dd.js",
-    "index.html": "/index.html",
-    "main.9577e8dd.js.map": "/static/js/main.9577e8dd.js.map"
+    "main.js": "/Keeper_test/static/js/main.9577e8dd.js",
+    "index.html": "/Keeper_test/index.html",
+    "main.9577e8dd.js.map": "/Keeper_test/static/js/main.9577e8dd.js.map"
   },
   "entrypoints": [
     "static/js/main.9577e8dd.js"
